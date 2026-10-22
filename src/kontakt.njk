@@ -18,9 +18,8 @@ eleventyComputed:
       <div class="cbox rv" style="--d:.12s"><small>Adresse</small><b>{{ site.adresse }}</b></div>
       <div class="photo rv" style="--d:.18s"><img src="{{ f.bilde }}" alt=""></div>
     </div>
-    <form class="rv" name="kontakt" method="POST" data-netlify="true" netlify-honeypot="bot-felt" action="/kontakt/takk/">
-      <input type="hidden" name="form-name" value="kontakt">
-      <p style="display:none"><label>Ikke fyll ut: <input name="bot-felt"></label></p>
+    <form class="rv" method="POST" action="{{ site.skjemaUrl or ('mailto:' + site.epost) }}" data-ajax="{{ '1' if site.skjemaUrl else '' }}"{% if not site.skjemaUrl %} enctype="text/plain"{% endif %}>
+      <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">
       <div class="row">
         <label>Navn<input name="navn" required autocomplete="name"></label>
         <label>Telefon<input name="telefon" type="tel" autocomplete="tel"></label>
@@ -31,6 +30,8 @@ eleventyComputed:
       </label>
       <label>Melding<textarea name="melding" required placeholder="Skriv kort om hva du ønsker gjort og hvor tomten ligger."></textarea></label>
       <button class="btn btn-gold" type="submit" style="justify-self:start">Send melding {% include "arrow.njk" %}</button>
+      <p class="form-ok">Takk! Vi har mottatt meldingen og tar kontakt.</p>
+      <p class="form-err" style="display:none;color:#ff8a7a">Noe gikk galt. Prøv igjen, eller ring oss.</p>
       <p class="note">Vi bruker opplysningene kun til å svare på henvendelsen din.</p>
     </form>
   </div>

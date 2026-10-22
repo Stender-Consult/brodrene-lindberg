@@ -25,3 +25,16 @@ if (heroBg && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
     if (scrollY < innerHeight * 1.2) heroBg.style.transform = `translateY(${scrollY * .1}px) scale(1.04)`;
   }, { passive: true });
 }
+
+// contact form: send via fetch when a form endpoint is configured
+const form = document.querySelector('form[data-ajax="1"]');
+form?.addEventListener('submit', async e => {
+  e.preventDefault();
+  const ok = form.querySelector('.form-ok'), err = form.querySelector('.form-err');
+  err.style.display = 'none';
+  try {
+    const r = await fetch(form.action, { method: 'POST', body: new FormData(form), headers: { Accept: 'application/json' } });
+    if (!r.ok) throw new Error();
+    form.reset(); ok.classList.add('show');
+  } catch { err.style.display = 'block'; }
+});
