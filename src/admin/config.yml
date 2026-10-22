@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: stender-sebastian/brodrene-lindberg
+  repo: Stender-Consult/brodrene-lindberg
   branch: main
   # Samme innloggingsbro som Oliva Park kan brukes. Se oauth-worker/README.md.
   base_url: https://oliva-park-cms-auth.oliva-park.workers.dev
