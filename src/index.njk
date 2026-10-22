@@ -6,7 +6,7 @@ eleventyComputed:
 ---
 {% set f = forside %}
 <section class="hero big">
-  <div class="hero-bg" style="background-image:url({{ f.heroBilde }});background-position:center 60%"></div>
+  <div class="hero-bg" style="background-image:url({{ f.heroBilde }});--pos:center 60%;--pos-m:68% center"></div>
   <div class="wrap">
     <span class="label">{{ site.undertittel }}</span>
     <h1>{{ f.heroTittel }}</h1>

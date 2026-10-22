@@ -14,7 +14,7 @@ eleventyComputed:
   <div class="wrap">
     <div class="sec-head"><div><h2>{{ f.teamTittel }}</h2></div></div>
     <div class="team" style="grid-template-columns:repeat(2,1fr);max-width:860px">
-      {% for m in f.team %}<figure class="photo rv"><img src="{{ m.bilde }}" alt="{{ m.navn }}"><figcaption>{{ m.navn }}<small>{{ m.rolle }}</small></figcaption></figure>{% endfor %}
+      {% for m in f.team %}<figure class="photo rv"><img src="{{ m.bilde }}" alt="{{ m.navn }}"><figcaption>{{ m.navn }}</figcaption></figure>{% endfor %}
     </div>
   </div>
 </section>

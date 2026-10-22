@@ -9,12 +9,10 @@
   "team": [
     {
       "navn": "Elias Lindberg",
-      "rolle": "Anleggsgartner",
       "bilde": "/images/6Y3A2519.jpg"
     },
     {
       "navn": "Arne Daniel Lindberg",
-      "rolle": "Anleggsgartner",
       "bilde": "/images/6Y3A2537.jpg"
     }
   ],

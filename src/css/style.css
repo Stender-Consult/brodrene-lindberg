@@ -65,7 +65,7 @@ h2{font-size:clamp(1.9rem,3.4vw,2.9rem)}
 .hero{position:relative;isolation:isolate;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end}
 .hero.big{min-height:100svh;padding:150px 0 72px}
 .hero.mid{min-height:62svh;padding:170px 0 64px}
-.hero-bg{position:absolute;inset:-14% 0;z-index:-2;background-size:cover;background-position:center;will-change:transform}
+.hero-bg{position:absolute;inset:-14% 0;z-index:-2;background-size:cover;background-position:var(--pos,center);will-change:transform}
 .hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(12,13,11,.45) 0%,rgba(12,13,11,0) 30%,rgba(12,13,11,.55) 100%),linear-gradient(90deg,rgba(12,13,11,.72),transparent 65%)}
 .hero h1{font-size:clamp(2.4rem,5.6vw,5rem);max-width:15ch;margin-bottom:1.3rem}
 .hero.mid h1{font-size:clamp(2.2rem,4.8vw,4.2rem)}
@@ -191,4 +191,11 @@ input:focus,select:focus,textarea:focus{outline:none;border-color:var(--gold);bo
 @media (prefers-reduced-motion:reduce){
   *{transition-duration:.01ms!important}
   .rv{opacity:1;transform:none}
+}
+
+@media (max-width:700px){
+  .hero-bg{background-position:var(--pos-m,var(--pos,center))}
+  .split .photo{aspect-ratio:4/3}
+  .split .photo img{object-position:center 30%!important}
+  .team .photo{aspect-ratio:4/5}
 }

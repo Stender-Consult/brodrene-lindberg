@@ -47,7 +47,6 @@ collections:
             summary: "{{fields.navn}}"
             fields:
               - { label: "Navn", name: "navn", widget: "string" }
-              - { label: "Tittel", name: "rolle", widget: "string" }
               - { label: "Bilde", name: "bilde", widget: "image" }
           - { label: "Bunnfelt: overskrift", name: "ctaTittel", widget: "string" }
           - { label: "Bunnfelt: tekst", name: "ctaTekst", widget: "string" }
