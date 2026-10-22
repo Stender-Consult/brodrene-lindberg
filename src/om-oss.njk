@@ -1,0 +1,22 @@
+---
+layout: base.njk
+permalink: /om-oss/
+eleventyComputed:
+  title: "{{ omoss.title }}"
+  description: "{{ omoss.description }}"
+---
+{% set f = omoss %}
+<section class="hero mid">
+  <div class="hero-bg" style="background-image:url({{ f.heroBilde }});background-position:{{ f.heroPos or 'center' }}"></div>
+  <div class="wrap"><h1>{{ f.tittel }}</h1><p class="lead">{{ f.ingress }}</p></div>
+</section>
+<section class="pad">
+  <div class="wrap">
+    <div class="sec-head"><div><h2>{{ f.teamTittel }}</h2></div></div>
+    <div class="team" style="grid-template-columns:repeat(2,1fr);max-width:860px">
+      {% for m in f.team %}<figure class="photo rv"><img src="{{ m.bilde }}" alt="{{ m.navn }}"><figcaption>{{ m.navn }}<small>{{ m.rolle }}</small></figcaption></figure>{% endfor %}
+    </div>
+  </div>
+</section>
+{% set ctaTittel = f.ctaTittel %}{% set ctaTekst = f.ctaTekst %}
+{% include "cta.njk" %}

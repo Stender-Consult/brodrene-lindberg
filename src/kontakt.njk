@@ -1,0 +1,37 @@
+---
+layout: base.njk
+permalink: /kontakt/
+eleventyComputed:
+  title: "{{ kontakt.title }}"
+  description: "{{ kontakt.description }}"
+---
+{% set f = kontakt %}
+<section class="hero mid">
+  <div class="hero-bg" style="background-image:url({{ f.heroBilde }});background-position:center 60%"></div>
+  <div class="wrap"><h1>{{ f.tittel }}</h1><p class="lead">{{ f.ingress }}</p></div>
+</section>
+<section class="pad">
+  <div class="wrap contact-grid">
+    <div class="cinfo">
+      <a class="cbox rv" href="tel:{{ site.telefonLenke }}"><small>Telefon</small><b>{{ site.telefon }}</b></a>
+      <a class="cbox rv" style="--d:.06s" href="mailto:{{ site.epost }}"><small>E-post</small><b>{{ site.epost }}</b></a>
+      <div class="cbox rv" style="--d:.12s"><small>Adresse</small><b>{{ site.adresse }}</b></div>
+      <div class="photo rv" style="--d:.18s"><img src="{{ f.bilde }}" alt=""></div>
+    </div>
+    <form class="rv" name="kontakt" method="POST" data-netlify="true" netlify-honeypot="bot-felt" action="/kontakt/takk/">
+      <input type="hidden" name="form-name" value="kontakt">
+      <p style="display:none"><label>Ikke fyll ut: <input name="bot-felt"></label></p>
+      <div class="row">
+        <label>Navn<input name="navn" required autocomplete="name"></label>
+        <label>Telefon<input name="telefon" type="tel" autocomplete="tel"></label>
+      </div>
+      <label>E-post<input name="epost" type="email" autocomplete="email"></label>
+      <label>Gjelder det
+        <select name="tjeneste">{% for t in tjenester.liste %}<option>{{ t.tittel }}</option>{% endfor %}<option>Annet</option></select>
+      </label>
+      <label>Melding<textarea name="melding" required placeholder="Skriv kort om hva du ønsker gjort og hvor tomten ligger."></textarea></label>
+      <button class="btn btn-gold" type="submit" style="justify-self:start">Send melding {% include "arrow.njk" %}</button>
+      <p class="note">Vi bruker opplysningene kun til å svare på henvendelsen din.</p>
+    </form>
+  </div>
+</section>

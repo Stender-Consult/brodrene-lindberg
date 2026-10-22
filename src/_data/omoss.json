@@ -1,0 +1,23 @@
+{
+  "title": "Om oss, Brødrene Lindberg",
+  "description": "Brødrene Lindberg er et anleggsgartnerfirma som utfører grunnarbeid, steinarbeider og grøntarbeid.",
+  "heroBilde": "/images/6Y3A2485.jpg",
+  "heroPos": "center 70%",
+  "tittel": "Anleggsgartnere som gjør jobben selv",
+  "ingress": "Brødrene Lindberg utfører grunnarbeid, steinarbeider og grøntarbeid på private tomter.",
+  "teamTittel": "Folkene bak",
+  "team": [
+    {
+      "navn": "Elias Lindberg",
+      "rolle": "Anleggsgartner",
+      "bilde": "/images/6Y3A2519.jpg"
+    },
+    {
+      "navn": "Arne Daniel Lindberg",
+      "rolle": "Anleggsgartner",
+      "bilde": "/images/6Y3A2537.jpg"
+    }
+  ],
+  "ctaTittel": "Har du et prosjekt?",
+  "ctaTekst": "Send oss en melding, så tar vi en prat om hva som er mulig."
+}

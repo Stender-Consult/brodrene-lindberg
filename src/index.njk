@@ -1,0 +1,41 @@
+---
+layout: base.njk
+eleventyComputed:
+  title: "{{ forside.title }}"
+  description: "{{ forside.description }}"
+---
+{% set f = forside %}
+<section class="hero big">
+  <div class="hero-bg" style="background-image:url({{ f.heroBilde }});background-position:center 60%"></div>
+  <div class="wrap">
+    <span class="label">{{ site.undertittel }}</span>
+    <h1>{{ f.heroTittel }}</h1>
+    <p class="lead">{{ f.heroTekst }}</p>
+    <div class="hero-actions"><a class="btn btn-gold" href="/kontakt/">Be om tilbud {% include "arrow.njk" %}</a><a class="btn btn-glass" href="/tjenester/">Se tjenester</a></div>
+  </div>
+</section>
+
+<section class="pad">
+  <div class="wrap">
+    <div class="sec-head"><div><h2>{{ f.tjenesterTittel }}</h2></div><p>{{ f.tjenesterTekst }}</p></div>
+    {% include "tiles.njk" %}
+  </div>
+</section>
+
+<section class="pad" style="padding-top:0">
+  <div class="wrap split">
+    <div class="photo rv"><img src="{{ f.omBilde }}" alt="" loading="lazy" style="object-position:35% center"></div>
+    <div>
+      <h2>{{ f.omTittel }}</h2>
+      <p class="lead">{{ f.omTekst }}</p>
+      <a class="link" href="/om-oss/">Les mer om oss →</a>
+    </div>
+  </div>
+</section>
+
+<section style="padding-bottom:clamp(72px,9vw,120px)">
+  <div class="wrap"><div class="gal">{% for b in f.galleri %}<figure class="rv"><img src="{{ b }}" alt="" loading="lazy"></figure>{% endfor %}</div></div>
+</section>
+
+{% set ctaTittel = f.ctaTittel %}{% set ctaTekst = f.ctaTekst %}
+{% include "cta.njk" %}

@@ -1,0 +1,26 @@
+---
+layout: base.njk
+aktiv: tjeneste
+pagination:
+  data: tjenester.liste
+  size: 1
+  alias: t
+permalink: "/{{ t.slug }}/"
+eleventyComputed:
+  title: "{{ t.tittel }}, Brødrene Lindberg"
+  description: "{{ t.description }}"
+---
+<section class="hero mid">
+  <div class="hero-bg" style="background-image:url({{ t.heroBilde }});background-position:{{ t.heroPos }}"></div>
+  <div class="wrap"><a class="crumb" href="/tjenester/">← Tjenester</a><h1>{{ t.tittel }}</h1><p class="lead">{{ t.ingress }}</p></div>
+</section>
+<section class="pad">
+  <div class="wrap"><div class="items">{% for p in t.punkter %}<div class="item rv"><h3>{{ p.tittel }}</h3><p>{{ p.tekst }}</p></div>{% endfor %}</div></div>
+</section>
+<section style="padding-bottom:clamp(56px,7vw,90px)"><div class="wrap"><div class="gal three">{% for b in t.galleri %}<figure class="rv"><img src="{{ b }}" alt="" loading="lazy"></figure>{% endfor %}</div></div></section>
+<section style="padding-bottom:clamp(64px,8vw,110px)"><div class="wrap">
+  <h3 style="margin-bottom:1rem;font-size:1.2rem">Andre tjenester</h3>
+  <div class="others">{% for o in tjenester.liste %}{% if o.slug != t.slug %}<a class="btn btn-glass" href="/{{ o.slug }}/">{{ o.tittel }}</a>{% endif %}{% endfor %}</div>
+</div></section>
+{% set ctaTittel = "Vil du ha et tilbud?" %}{% set ctaTekst = "Fortell oss om tomten og hva du ønsker, så tar vi kontakt." %}
+{% include "cta.njk" %}

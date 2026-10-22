@@ -1,0 +1,118 @@
+{
+  "liste": [
+    {
+      "slug": "uteomrader",
+      "tittel": "Opparbeidelse av uteområder",
+      "bilde": "/images/6Y3A4610.jpg",
+      "bildeAlt": "Komprimering av grunn",
+      "heroBilde": "/images/6Y3A4610.jpg",
+      "heroPos": "center 65%",
+      "description": "Grunnarbeider, overvannshåndtering og fuktsikring av kjellere.",
+      "ingress": "Et uteområde som holder må ha riktig grunn. Vi graver, bygger opp og drenerer, slik at stein, plen og beplantning får et stabilt underlag og vannet går dit det skal.",
+      "merkelapper": [
+        "Grunnarbeider",
+        "Overvannshåndtering",
+        "Fuktsikring av kjellere"
+      ],
+      "punkter": [
+        {
+          "tittel": "Grunnarbeider",
+          "tekst": "Graving, utfylling og komprimering av underlag til innkjørsler, plasser, stier og hager."
+        },
+        {
+          "tittel": "Overvannshåndtering",
+          "tekst": "Vi sørger for at regn og smeltevann ledes bort fra huset og ikke blir stående på tomten."
+        },
+        {
+          "tittel": "Fuktsikring av kjellere",
+          "tekst": "Drenering og tetting rundt grunnmuren for å holde kjelleren tørr."
+        }
+      ],
+      "galleri": [
+        "/images/6Y3A4647.jpg",
+        "/images/6Y3A4676.jpg",
+        "/images/6Y3A4582.jpg"
+      ]
+    },
+    {
+      "slug": "steinarbeider",
+      "tittel": "Steinarbeider",
+      "bilde": "/images/6Y3A2482.jpg",
+      "bildeAlt": "Legging av belegningsstein",
+      "heroBilde": "/images/6Y3A2482.jpg",
+      "heroPos": "center 60%",
+      "description": "Naturstein, støttemurer, trapper, belegningsstein og kantstein.",
+      "ingress": "Vi legger stein til innkjørsler, uteplasser, trapper og murer. Underlaget avgjør om steinen ligger pent i mange år, så det bruker vi tid på.",
+      "merkelapper": [
+        "Naturstein",
+        "Støttemurer og trapper",
+        "Belegningsstein",
+        "Kantstein"
+      ],
+      "punkter": [
+        {
+          "tittel": "Naturstein",
+          "tekst": "Alt innen naturstein, til plasser, trapper, murer og avgrensninger."
+        },
+        {
+          "tittel": "Støttemurer og trapper",
+          "tekst": "Murer som holder terrenget på plass, og trapper som gjør tomten lett å bruke."
+        },
+        {
+          "tittel": "Belegningsstein",
+          "tekst": "Legging av belegningsstein i innkjørsler, gangarealer og på uteplasser."
+        },
+        {
+          "tittel": "Kantstein",
+          "tekst": "Kantstein som avgrenser og holder steinleggingen og grøntarealene på plass."
+        }
+      ],
+      "galleri": [
+        "/images/6Y3A2464.jpg",
+        "/images/6Y3A2476.jpg",
+        "/images/6Y3A2485.jpg"
+      ]
+    },
+    {
+      "slug": "grontarbeid",
+      "tittel": "Grøntarbeid",
+      "bilde": "/images/6Y3A2570.jpg",
+      "bildeAlt": "Hage og innkjørsel",
+      "heroBilde": "/images/6Y3A2570.jpg",
+      "heroPos": "center 35%",
+      "description": "Beplantning, plener, busker, hekker, trær, beskjæring og trefelling.",
+      "ingress": "Vi planter og steller det som skal vokse på tomten din, og tar ned det som må bort.",
+      "merkelapper": [
+        "Beplantning",
+        "Plener",
+        "Busker",
+        "Hekker",
+        "Trær",
+        "Beskjæring og trefelling"
+      ],
+      "punkter": [
+        {
+          "tittel": "Beplantning",
+          "tekst": "Planlegging og planting av busker, hekker og trær som passer tomten."
+        },
+        {
+          "tittel": "Plener",
+          "tekst": "Opparbeiding av nye plener og utbedring av eksisterende."
+        },
+        {
+          "tittel": "Busker, hekker og trær",
+          "tekst": "Planting og stell, tilpasset hvor mye sol og plass det er."
+        },
+        {
+          "tittel": "Beskjæring og trefelling",
+          "tekst": "Beskjæring av trær og hekker, og felling av trær som må fjernes."
+        }
+      ],
+      "galleri": [
+        "/images/6Y3A2573.jpg",
+        "/images/6Y3A2537.jpg",
+        "/images/6Y3A2519.jpg"
+      ]
+    }
+  ]
+}

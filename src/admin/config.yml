@@ -1,0 +1,116 @@
+backend:
+  name: github
+  repo: Stender-Consult/Brodrene-Lindberg
+  branch: main
+  # Samme innloggingsbro som Oliva Park kan brukes. Se oauth-worker/README.md.
+  base_url: https://oliva-park-cms-auth.oliva-park.workers.dev
+  auth_endpoint: auth
+
+locale: nb
+media_folder: "src/images"
+public_folder: "/images"
+
+collections:
+  - name: "sider"
+    label: "Sider"
+    files:
+      - name: "forside"
+        label: "Forside"
+        file: "src/_data/forside.json"
+        fields:
+          - { label: "Sidetittel (Google)", name: "title", widget: "string" }
+          - { label: "Beskrivelse (Google)", name: "description", widget: "text" }
+          - { label: "Hovedbilde", name: "heroBilde", widget: "image" }
+          - { label: "Overskrift", name: "heroTittel", widget: "string" }
+          - { label: "Tekst under overskrift", name: "heroTekst", widget: "text" }
+          - { label: "Tjenester: overskrift", name: "tjenesterTittel", widget: "string" }
+          - { label: "Tjenester: tekst", name: "tjenesterTekst", widget: "string" }
+          - { label: "Om oss: overskrift", name: "omTittel", widget: "string" }
+          - { label: "Om oss: tekst", name: "omTekst", widget: "text" }
+          - { label: "Om oss: bilde", name: "omBilde", widget: "image" }
+          - { label: "Bildegalleri", name: "galleri", widget: "list", field: { label: "Bilde", name: "bilde", widget: "image" } }
+          - { label: "Bunnfelt: overskrift", name: "ctaTittel", widget: "string" }
+          - { label: "Bunnfelt: tekst", name: "ctaTekst", widget: "string" }
+      - name: "omoss"
+        label: "Om oss"
+        file: "src/_data/omoss.json"
+        fields:
+          - { label: "Sidetittel (Google)", name: "title", widget: "string" }
+          - { label: "Beskrivelse (Google)", name: "description", widget: "text" }
+          - { label: "Hovedbilde", name: "heroBilde", widget: "image" }
+          - { label: "Overskrift", name: "tittel", widget: "string" }
+          - { label: "Tekst under overskrift", name: "ingress", widget: "text" }
+          - { label: "Teamoverskrift", name: "teamTittel", widget: "string" }
+          - label: "Team"
+            name: "team"
+            widget: "list"
+            summary: "{{fields.navn}}"
+            fields:
+              - { label: "Navn", name: "navn", widget: "string" }
+              - { label: "Tittel", name: "rolle", widget: "string" }
+              - { label: "Bilde", name: "bilde", widget: "image" }
+          - { label: "Bunnfelt: overskrift", name: "ctaTittel", widget: "string" }
+          - { label: "Bunnfelt: tekst", name: "ctaTekst", widget: "string" }
+      - name: "tjenesteside"
+        label: "Tjenester (oversiktsside)"
+        file: "src/_data/tjenesteside.json"
+        fields:
+          - { label: "Sidetittel (Google)", name: "title", widget: "string" }
+          - { label: "Beskrivelse (Google)", name: "description", widget: "text" }
+          - { label: "Hovedbilde", name: "heroBilde", widget: "image" }
+          - { label: "Overskrift", name: "tittel", widget: "string" }
+          - { label: "Tekst under overskrift", name: "ingress", widget: "text" }
+          - { label: "Bunnfelt: overskrift", name: "ctaTittel", widget: "string" }
+          - { label: "Bunnfelt: tekst", name: "ctaTekst", widget: "string" }
+      - name: "kontakt"
+        label: "Kontakt oss (tekst og bilde)"
+        file: "src/_data/kontakt.json"
+        fields:
+          - { label: "Sidetittel (Google)", name: "title", widget: "string" }
+          - { label: "Beskrivelse (Google)", name: "description", widget: "text" }
+          - { label: "Hovedbilde", name: "heroBilde", widget: "image" }
+          - { label: "Overskrift", name: "tittel", widget: "string" }
+          - { label: "Tekst under overskrift", name: "ingress", widget: "text" }
+          - { label: "Bilde ved siden av skjemaet", name: "bilde", widget: "image" }
+  - name: "innstillinger"
+    label: "Kontaktinfo"
+    files:
+      - name: "site"
+        label: "Firmainfo og kontaktinfo"
+        file: "src/_data/site.json"
+        fields:
+          - { label: "Firmanavn", name: "navn", widget: "string" }
+          - { label: "Undertittel", name: "undertittel", widget: "string" }
+          - { label: "Telefon (vises)", name: "telefon", widget: "string" }
+          - { label: "Telefon (lenke, med landskode, uten mellomrom)", name: "telefonLenke", widget: "string", hint: "For eksempel +4791001545" }
+          - { label: "E-post", name: "epost", widget: "string" }
+          - { label: "Adresse", name: "adresse", widget: "string" }
+  - name: "tjenester"
+    label: "Tjenester"
+    files:
+      - name: "tjenester"
+        label: "Tjenestene (undersider)"
+        file: "src/_data/tjenester.json"
+        fields:
+          - label: "Tjenester"
+            name: "liste"
+            widget: "list"
+            summary: "{{fields.tittel}}"
+            fields:
+              - { label: "Nettadresse (ikke endre)", name: "slug", widget: "string", hint: "Endres denne, endres adressen til siden." }
+              - { label: "Tittel", name: "tittel", widget: "string" }
+              - { label: "Beskrivelse (Google)", name: "description", widget: "string" }
+              - { label: "Bilde på kort", name: "bilde", widget: "image" }
+              - { label: "Bildetekst (for synshemmede)", name: "bildeAlt", widget: "string" }
+              - { label: "Hovedbilde på undersiden", name: "heroBilde", widget: "image" }
+              - { label: "Bildeplassering (ikke endre)", name: "heroPos", widget: "string", default: "center" }
+              - { label: "Tekst under overskrift", name: "ingress", widget: "text" }
+              - { label: "Merkelapper på kort", name: "merkelapper", widget: "list", field: { label: "Merkelapp", name: "m", widget: "string" } }
+              - label: "Hva det omfatter"
+                name: "punkter"
+                widget: "list"
+                summary: "{{fields.tittel}}"
+                fields:
+                  - { label: "Tittel", name: "tittel", widget: "string" }
+                  - { label: "Tekst", name: "tekst", widget: "text" }
+              - { label: "Galleri", name: "galleri", widget: "list", field: { label: "Bilde", name: "bilde", widget: "image" } }

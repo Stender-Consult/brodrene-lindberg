@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>{{ title }}</title>
+<meta name="description" content="{{ description }}">
+<meta name="theme-color" content="#0c0d0b">
+<link rel="icon" href="/images/ikon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap nav">
+    <a class="logo" href="/" aria-label="{{ site.navn }}, forside"><img src="/images/logo-transparent.png" alt="{{ site.navn }}"></a>
+    <button class="burger" aria-label="Meny" aria-expanded="false"><span></span><span></span></button>
+    <ul>
+      <li><a href="/"{% if page.url == "/" %} aria-current="page"{% endif %}>Forside</a></li>
+      <li class="has-sub"><a href="/tjenester/"{% if page.url == "/tjenester/" or aktiv == "tjeneste" %} aria-current="page"{% endif %}>Tjenester <svg viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.8"><path d="m1 1 4 4 4-4"/></svg></a>
+        <ul class="sub">{% for t in tjenester.liste %}<li><a href="/{{ t.slug }}/">{{ t.tittel }}</a></li>{% endfor %}</ul></li>
+      <li><a href="/om-oss/"{% if page.url == "/om-oss/" %} aria-current="page"{% endif %}>Om oss</a></li>
+      <li><a href="/kontakt/"{% if page.url == "/kontakt/" %} aria-current="page"{% endif %}>Kontakt oss</a></li>
+      <li><a class="btn btn-gold" href="/kontakt/">Be om tilbud</a></li>
+    </ul>
+  </div>
+</header>
+<main>
+{{ content | safe }}
+</main>
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div><img src="/images/logo-transparent.png" alt="{{ site.navn }}"><p>{{ site.undertittel }}. Uteområder, stein og grøntarbeid.</p></div>
+      <div><h4>Sider</h4><ul><li><a href="/">Forside</a></li><li><a href="/om-oss/">Om oss</a></li><li><a href="/kontakt/">Kontakt oss</a></li></ul></div>
+      <div><h4>Tjenester</h4><ul>{% for t in tjenester.liste %}<li><a href="/{{ t.slug }}/">{{ t.tittel }}</a></li>{% endfor %}</ul></div>
+      <div><h4>Kontakt</h4><ul><li><a href="tel:{{ site.telefonLenke }}">{{ site.telefon }}</a></li><li><a href="mailto:{{ site.epost }}">{{ site.epost }}</a></li><li>{{ site.adresse }}</li></ul></div>
+    </div>
+    <div class="fbottom"><span>© <span id="yr">2026</span> {{ site.navn }}</span><span>{{ site.undertittel }}</span></div>
+  </div>
+</footer>
+<script>document.getElementById('yr').textContent=new Date().getFullYear()</script>
+<script src="/js/main.js"></script>
+</body>
+</html>

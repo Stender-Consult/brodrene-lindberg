@@ -1,0 +1,1 @@
+<div class="bento">{% for t in tjenester.liste %}<a class="tile rv" style="--d:{{ loop.index0 * 0.08 }}s" href="/{{ t.slug }}/"><img src="{{ t.bilde }}" alt="{{ t.bildeAlt }}" loading="lazy"><h3>{{ t.tittel }}</h3><ul class="chips">{% for m in t.merkelapper %}<li>{{ m }}</li>{% endfor %}</ul></a>{% endfor %}</div>

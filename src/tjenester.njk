@@ -1,0 +1,15 @@
+---
+layout: base.njk
+permalink: /tjenester/
+eleventyComputed:
+  title: "{{ tjenesteside.title }}"
+  description: "{{ tjenesteside.description }}"
+---
+{% set f = tjenesteside %}
+<section class="hero mid">
+  <div class="hero-bg" style="background-image:url({{ f.heroBilde }});background-position:center 60%"></div>
+  <div class="wrap"><h1>{{ f.tittel }}</h1><p class="lead">{{ f.ingress }}</p></div>
+</section>
+<section class="pad"><div class="wrap">{% include "tiles.njk" %}</div></section>
+{% set ctaTittel = f.ctaTittel %}{% set ctaTekst = f.ctaTekst %}
+{% include "cta.njk" %}
