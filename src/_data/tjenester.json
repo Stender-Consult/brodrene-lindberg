@@ -1,37 +1,76 @@
 {
   "liste": [
     {
-      "slug": "uteomrader",
-      "tittel": "Opparbeidelse av uteområder",
+      "slug": "grunnarbeider",
+      "tittel": "Grunnarbeider",
       "bilde": "/images/6Y3A4610.jpg",
       "bildeAlt": "Komprimering av grunn",
       "heroBilde": "/images/6Y3A4610.jpg",
       "heroPos": "center 65%",
-      "description": "Grunnarbeider, overvannshåndtering og fuktsikring av kjellere.",
-      "ingress": "Et uteområde som holder må ha riktig grunn. Vi graver, bygger opp og drenerer, slik at stein, plen og beplantning får et stabilt underlag og vannet går dit det skal.",
+      "description": "Graving, planering, utfylling og komprimering av grunn til innkjørsler, plasser og uteområder.",
+      "ingress": "Et uteområde som holder må ha riktig grunn. Vi graver, planerer og bygger opp underlaget, slik at stein, plen og beplantning får noe stabilt å stå på.",
       "merkelapper": [
-        "Grunnarbeider",
-        "Overvannshåndtering",
-        "Fuktsikring av kjellere"
+        "Graving",
+        "Planering",
+        "Komprimering",
+        "Uteområder"
       ],
       "punkter": [
         {
-          "tittel": "Grunnarbeider",
-          "tekst": "Graving, utfylling og komprimering av underlag til innkjørsler, plasser, stier og hager."
+          "tittel": "Graving og masseflytting",
+          "tekst": "Utgraving og bortkjøring eller flytting av masser, med egne maskiner."
         },
         {
-          "tittel": "Overvannshåndtering",
-          "tekst": "Vi sørger for at regn og smeltevann ledes bort fra huset og ikke blir stående på tomten."
+          "tittel": "Planering og tomteklargjøring",
+          "tekst": "Vi former terrenget og klargjør tomten før stein, plen eller beplantning."
         },
         {
-          "tittel": "Fuktsikring av kjellere",
-          "tekst": "Drenering og tetting rundt grunnmuren for å holde kjelleren tørr."
+          "tittel": "Underlag og komprimering",
+          "tekst": "Utfylling og komprimering av bærelag til innkjørsler, plasser, stier og hager."
+        },
+        {
+          "tittel": "Opparbeidelse av uteområder",
+          "tekst": "Hele uteområdet fra grunn til ferdig overflate, samlet i ett prosjekt."
         }
       ],
       "galleri": [
         "/images/6Y3A4647.jpg",
         "/images/6Y3A4676.jpg",
         "/images/6Y3A4582.jpg"
+      ]
+    },
+    {
+      "slug": "drenering",
+      "tittel": "Drenering",
+      "bilde": "/images/6Y3A4636.jpg",
+      "bildeAlt": "Tilhenger med pukk",
+      "heroBilde": "/images/6Y3A4636.jpg",
+      "heroPos": "center 60%",
+      "description": "Drenering, fuktsikring og overvannshåndtering.",
+      "ingress": "Vann som blir stående skader hus og tomt. Vi sørger for at det ledes bort riktig, og holder kjelleren og grunnmuren tørr.",
+      "merkelapper": [
+        "Drenering",
+        "Fuktsikring",
+        "Overvannshåndtering"
+      ],
+      "punkter": [
+        {
+          "tittel": "Drenering",
+          "tekst": "Drenering rundt hus og på tomten, slik at vannet ledes bort."
+        },
+        {
+          "tittel": "Fuktsikring",
+          "tekst": "Tetting og fuktsikring av grunnmur og kjeller for å holde kjelleren tørr."
+        },
+        {
+          "tittel": "Overvannshåndtering",
+          "tekst": "Vi sørger for at regn og smeltevann ledes bort fra huset og ikke blir stående på tomten."
+        }
+      ],
+      "galleri": [
+        "/images/6Y3A4670.jpg",
+        "/images/6Y3A4632.jpg",
+        "/images/6Y3A4584.jpg"
       ]
     },
     {
@@ -98,10 +137,6 @@
         {
           "tittel": "Plener",
           "tekst": "Opparbeiding av nye plener og utbedring av eksisterende."
-        },
-        {
-          "tittel": "Busker, hekker og trær",
-          "tekst": "Planting og stell, tilpasset hvor mye sol og plass det er."
         },
         {
           "tittel": "Beskjæring og trefelling",

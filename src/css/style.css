@@ -80,8 +80,8 @@ section{position:relative}
 /* service bento */
 .bento{display:grid;grid-template-columns:repeat(12,1fr);grid-template-rows:repeat(2,minmax(260px,1fr));gap:16px;height:min(680px,86vh)}
 .tile{position:relative;isolation:isolate;border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end;padding:30px;border:1px solid var(--line);transition:border-color .4s,transform .5s var(--ease)}
-.tile:nth-child(1){grid-column:span 7;grid-row:span 2}
-.tile:nth-child(2),.tile:nth-child(3){grid-column:span 5}
+.tile:nth-child(4n+1),.tile:nth-child(4n+4){grid-column:span 7}
+.tile:nth-child(4n+2),.tile:nth-child(4n+3){grid-column:span 5}
 .tile>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;transition:transform 1.2s var(--ease)}
 .tile::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(12,13,11,0) 30%,rgba(12,13,11,.92))}
 .tile:hover{border-color:var(--gold)}
