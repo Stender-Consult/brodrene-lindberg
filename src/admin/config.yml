@@ -47,6 +47,9 @@ collections:
             summary: "{{fields.navn}}"
             fields:
               - { label: "Navn", name: "navn", widget: "string" }
+              - { label: "E-post", name: "epost", widget: "string" }
+              - { label: "Telefon (vises)", name: "telefon", widget: "string" }
+              - { label: "Telefon (lenke, f.eks. +4791001545)", name: "telefonLenke", widget: "string" }
               - { label: "Bilde", name: "bilde", widget: "image" }
           - { label: "Bunnfelt: overskrift", name: "ctaTittel", widget: "string" }
           - { label: "Bunnfelt: tekst", name: "ctaTekst", widget: "string" }

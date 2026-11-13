@@ -81,7 +81,7 @@
       "heroBilde": "/images/6Y3A2482.jpg",
       "heroPos": "center 60%",
       "description": "Naturstein, støttemurer, trapper, belegningsstein og kantstein.",
-      "ingress": "Vi legger stein til innkjørsler, uteplasser, trapper og murer. Underlaget avgjør om steinen ligger pent i mange år, så det bruker vi tid på.",
+      "ingress": "Vi legger stein i innkjørsler, uteplasser og monterer trapper og murer av granitt og betong. Underlaget avgjør om steinen ligger pent i mange år, derfor gjøres dette ordentlig!",
       "merkelapper": [
         "Naturstein",
         "Støttemurer og trapper",
@@ -91,19 +91,11 @@
       "punkter": [
         {
           "tittel": "Naturstein",
-          "tekst": "Alt innen naturstein, til plasser, trapper, murer og avgrensninger."
-        },
-        {
-          "tittel": "Støttemurer og trapper",
-          "tekst": "Murer som holder terrenget på plass, og trapper som gjør tomten lett å bruke."
-        },
-        {
-          "tittel": "Belegningsstein",
-          "tekst": "Legging av belegningsstein i innkjørsler, gangarealer og på uteplasser."
+          "tekst": "Alt innen granitt og skifer til plasser, trapper, murer og avgrensninger."
         },
         {
           "tittel": "Kantstein",
-          "tekst": "Kantstein som avgrenser og holder steinleggingen og grøntarealene på plass."
+          "tekst": "Kantstein som avgrenser og skiller mellom stein og grøntområder."
         }
       ],
       "galleri": [

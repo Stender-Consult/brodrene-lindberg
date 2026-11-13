@@ -3,16 +3,22 @@
   "description": "Brødrene Lindberg er et anleggsgartnerfirma som utfører grunnarbeid, steinarbeider og grøntarbeid.",
   "heroBilde": "/images/6Y3A2485.jpg",
   "heroPos": "center 70%",
-  "tittel": "Anleggsgartnere som gjør jobben selv",
-  "ingress": "Brødrene Lindberg utfører grunnarbeid, steinarbeider og grøntarbeid på private tomter.",
+  "tittel": "Anleggsgartnere som brenner for faget og gode løsninger.",
+  "ingress": "",
   "teamTittel": "Folkene bak",
   "team": [
     {
       "navn": "Elias Lindberg",
+      "epost": "elias@brodlind.no",
+      "telefon": "910 01 545",
+      "telefonLenke": "+4791001545",
       "bilde": "/images/6Y3A2519.jpg"
     },
     {
       "navn": "Daniel Lindberg",
+      "epost": "daniel@brodlind.no",
+      "telefon": "948 47 684",
+      "telefonLenke": "+4794847684",
       "bilde": "/images/6Y3A2537.jpg"
     }
   ],
